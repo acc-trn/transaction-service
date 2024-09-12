@@ -1,4 +1,4 @@
-package com.acc.transactionservice.external.model;
+package com.acc.transactionservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

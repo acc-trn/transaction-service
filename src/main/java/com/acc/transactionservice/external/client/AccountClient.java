@@ -1,6 +1,6 @@
 package com.acc.transactionservice.external.client;
 
-import com.acc.transactionservice.external.model.APIResponse;
+import com.acc.transactionservice.model.APIResponse;
 import com.acc.transactionservice.external.model.AccountDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
