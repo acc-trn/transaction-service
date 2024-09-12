@@ -1,6 +1,5 @@
 package com.acc.transactionservice.entity;
 
-import com.acc.transactionservice.model.TransactionType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,21 +18,16 @@ public class Transaction extends AuditingEntity<String> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Double amount;
-
     private String description;
 
-    @Enumerated(EnumType.STRING)
-    private TransactionType transactionType; // INCOME, EXPENSE, TRANSFER
+    private Double amount;
+
+    private String category; // e.g., Food, Entertainment, Bills
+
+    private String type; // INCOME or EXPENSE
+
+    private Long accountId; // Reference to account in another service
 
     private LocalDateTime transactionDate;
-
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
-
-//    @ManyToOne
-//    @JoinColumn(name = "account_id")
-//    private Account account;
 
 }
