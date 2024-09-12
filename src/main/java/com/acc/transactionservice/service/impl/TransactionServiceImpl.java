@@ -25,6 +25,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     private final TransactionMapper transactionMapper;
 
+    @Autowired
     public TransactionServiceImpl(TransactionRepository transactionRepository, AccountClient accountClient, TransactionMapper transactionMapper) {
         this.transactionRepository = transactionRepository;
         this.accountClient = accountClient;
